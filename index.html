@@ -1,7 +1,17 @@
 <html>
     <head>
         <script>
-            alert("hello");
+            function sumOfMultiples(n, a, b) {
+                let total = 0;
+
+                for (let i = 0; i < n; i++) {
+                    if (i % a == 0 || i % b ==0) {
+                        total += i;
+                    }
+                }
+                return total;
+            }
+            alert(result);
         </script>
     </head>
 </html>
