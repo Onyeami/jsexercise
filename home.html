@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script>
+            function sumOfMultiples(n, a, b) {
+                let total = 0;
+
+                for (let i = 0; i < n; i++) {
+                    if (i % a == 0 || i % b ==0) {
+                        total += i;
+                    }
+                }
+                return total;
+            }
+            let result = sumOfMultiples(10, 3, 5)
+            alert(result);
+
+            function f4(a, b, l) {
+                let total = 0;
+
+                for (let i = 0; i < l.length; i++) {
+                    if (l[i] % a === 0 || l[i] % b === 0) {
+                        total += l[i];
+                    }
+
+                }
+
+                return total;
+            }
+            result = f4(3, 5,[ 6, 10, 12])
+            alert(result)
+
+            function f5(a, l) {
+                let total = 0;
+
+                for (let i = 0; i < l.length; i++) {
+                    if (l[i] % a[0] === 0 || l[i] % a[1] === 0) {
+                        total += l[i];
+                    }
+                }
+
+                return total;
+            }
+            result =f5([3, 5], [1, 3, 5, 6, 10, 12])
+            alert(result)
+
+            function f6(a, l) {
+                let total = 0;
+
+                for (let i = 0; i < l.length; i++) {
+                    for (let j = 0; j < a.length; j++) {
+                        if (l[i] % a[j] === 0) {
+                            total += l[i];
+                            break;
+                        }
+                    }
+                }
+                return total;
+            }
+            result =f6([2, 3, 5], [1, 2, 3, 4, 5, 6, 10, 11])
+            alert(result)
+
+            let f61handler=()=> {
+                let a = document.getElementById("a").value.split(",").map(x => parseInt(x.trim()));
+                let l = document.getElementById("l").value.split(",").map(x => parseInt(x.trim()));
+                alert(a)
+                alert(l)
+                alert(f6(a,l));
+            }
+            
+        </script>
+    </head>
+    <body>
+        <label for="a">a:</label><br>
+        <input type="number" id="a"><br>
+
+        <label for="l">l:</label><br>
+        <input type="number" id="l"><br>
+        <button onclick="f61handler()">Press Me</button>
+    </body>
+</html>
