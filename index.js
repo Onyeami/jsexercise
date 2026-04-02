@@ -1,3 +1,4 @@
+alert("Hello World!")
 let weight = document.getElementById("in").value;  // Get the value from the input
 weight = Number(weight); // Convert it to a number
 if (weight > 15) {
