@@ -62,7 +62,8 @@
             let f61handler=()=> {
                 let a = document.getElementById("a").value.split(",").map(x => parseInt(x.trim()));
                 let l = document.getElementById("l").value.split(",").map(x => parseInt(x.trim()));
-                
+                alert(a)
+                alert(l)
                 alert(f6(a,l));
             }
             
@@ -70,10 +71,10 @@
     </head>
     <body>
         <label for="a">a:</label><br>
-        <input type="text" id="a"><br>
+        <input type="number" id="a"><br>
 
         <label for="l">l:</label><br>
-        <input type="text" id="l"><br>
+        <input type="number" id="l"><br>
         <button onclick="f61handler()">Press Me</button>
     </body>
 </html>
