@@ -58,6 +58,22 @@
             }
             result =f6([2, 3, 5], [1, 2, 3, 4, 5, 6, 10, 11])
             alert(result)
+
+            let f61handler=()=> {
+                let a = document.getElementById("a").value.split(",").map(x => parseInt(x.trim()));
+                let l = document.getElementById("l").value.split(",").map(x => parseInt(x.trim()));
+                
+                alert(f6(a,l));
+            }
+            
         </script>
     </head>
+    <body>
+        <label for="a">a:</label><br>
+        <input type="text" id="a"><br>
+
+        <label for="l">l:</label><br>
+        <input type="text" id="l"><br>
+        <button onclick="alert(f6())">Press Me</button>
+    </body>
 </html>
