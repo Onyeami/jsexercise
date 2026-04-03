@@ -10,7 +10,7 @@ let c = () => {
         alert("Baggage is within the allowed limit.");
     }
 }
-let doIt = () => alert("Not Implemented");
+//let doIt = () => alert("Not Implemented");
 
 function doIt() {
     let sum = 0;
